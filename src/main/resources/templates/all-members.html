@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" type="text/css" href="springboot.css" />-->
+    <title>All OUR USERS</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Account</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="member, iterStat : ${members}">
+        <td th:text="${iterStat.index + 1}"></td>
+        <td th:text="${member.firstName}"></td>
+        <td th:text="${member.lastName}"></td>
+        <td th:text="${member.email}"></td>
+        <td th:text="${member.account.getAcNumber()}"></td>
+<!--        <td>-->
+<!--            <div th:if="${member.enabled} == 'YES'">-->
+<!--                <span th:text="'USER ACCOUNT ACTIVATED'"></span>-->
+<!--            </div>-->
+
+<!--            <div th:if="${member.enabled} == 'NO'">-->
+<!--                <span th:text="'USER ACCOUNT DISABLED'"/>-->
+<!--            </div>-->
+<!--        </td>-->
+
+        <td><a th:href="@{/find-member-by-email(email=${member.email})}">Go To User</a></td>
+        <td><a th:href="@{'/find-member-by-email/'+ ${member.email}}">Go To User With Path Variable</a></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>
