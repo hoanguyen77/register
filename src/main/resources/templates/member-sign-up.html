@@ -80,7 +80,7 @@
                                id="balance"
                                name="balance"
                                placeholder="Enter minimum amount required"
-                               type="text"
+                               type="number"
                                th:field="*{balance}">
                         <span th:if="${#fields.hasErrors('balance')}"
                               th:errors="*{balance}"></span>
