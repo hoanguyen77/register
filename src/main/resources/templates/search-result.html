@@ -26,8 +26,8 @@
         <td th:text="${member.account.getAcNumber()}"></td>
 
 
-        <td><a th:href="@{/find-user-by-email(email=${member.email})}">Go To User</a></td>
-        <td><a th:href="@{'/find-user-by-email/'+ ${member.email}}">Go To User With Path Variable</a></td>
+        <td><a th:href="@{/find-member-by-email(email=${member.email})}">Go To User</a></td>
+        <td><a th:href="@{'/find-member-by-email/'+ ${member.email}}">Go To User With Path Variable</a></td>
     </tr>
     </tbody>
 

@@ -35,9 +35,9 @@ public class SecurityConfig {
 http.authorizeHttpRequests(
         auth -> auth.requestMatchers("/",
                 "/css/*","/js/*","/img/*",
-                "/user-sign-up", "/process-user","/confirmation",
+                "/member-sign-up", "/process-user","/confirmation",
                 "/list-of-members","/find-member-by-email",
-                "/find-student-by-email/{email}",
+                "/find-member-by-email/{email}",
                 "/login").permitAll()
                 .requestMatchers("/account")
                 .hasAnyRole("MEMBER","SENIOR")

@@ -25,7 +25,7 @@ public class RoleServiceTest {
     public void init()
     {
         role = new Role();
-        role.setName("ROLE_MEMBER");
+        role.setName("ROLE_SENIOR");
     }
 
     @Test

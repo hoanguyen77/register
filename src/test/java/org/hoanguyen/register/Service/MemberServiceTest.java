@@ -4,7 +4,6 @@ import org.hoanguyen.register.dto.AccountDTO;
 import org.hoanguyen.register.dto.MemberDTO;
 import org.hoanguyen.register.entity.Account;
 import org.hoanguyen.register.entity.Member;
-import org.hoanguyen.register.exception.UserExistException;
 import org.hoanguyen.register.repository.AccountRepository;
 import org.hoanguyen.register.repository.MemberRepository;
 import org.hoanguyen.register.service.AccountService;
