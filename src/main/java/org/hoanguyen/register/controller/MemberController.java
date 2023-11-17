@@ -36,6 +36,7 @@ public class MemberController {
         this.userService = userService;
     }
 
+<<<<<<< HEAD
     @GetMapping("/member-sign-up")
     public String signUpForm(Model model){
 
@@ -44,11 +45,25 @@ public class MemberController {
         model.addAttribute("user", new UserDTO());
 
         return "member-sign-up";
+=======
+    @GetMapping("/user-sign-up")
+    public String signUpForm(Model model){
+
+        model.addAttribute("userDto", new MemberDTO());
+        model.addAttribute("account", new AccountDTO());
+        model.addAttribute("user", new UserDTO());
+
+        return "user-sign-up";
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
     }
 
 
     @PostMapping("/process-user")
+<<<<<<< HEAD
     public String signUpProcess(@Valid @ModelAttribute("memberDto") MemberDTO memberDTO,
+=======
+    public String signUpProcess(@Valid @ModelAttribute("userDto") MemberDTO memberDTO,
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
                                 BindingResult bindingResult,
                                 @ModelAttribute ("account") AccountDTO accountDTO,
                                 BindingResult acBindingResult,
@@ -60,11 +75,19 @@ public class MemberController {
         {
             logger.warn("User wrong input " +
                     Arrays.toString(bindingResult.getSuppressedFields()));
+<<<<<<< HEAD
             return "member-sign-up";
         }
         if(userBindingResult.hasErrors())
         {
             return "member-sign-up";
+=======
+            return "user-sign-up";
+        }
+        if(userBindingResult.hasErrors())
+        {
+            return "user-sign-up";
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
         }
         try {
             int uniqueRandomInt = Math.abs(UUID.randomUUID().hashCode());
@@ -78,7 +101,11 @@ public class MemberController {
         } catch (Exception e)
         {
             model.addAttribute("message", "User wrong input");
+<<<<<<< HEAD
             return "member-sign-up";
+=======
+            return "user-sign-up";
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
         }
 
 

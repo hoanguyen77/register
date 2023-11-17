@@ -4,6 +4,10 @@ import org.hoanguyen.register.dto.AccountDTO;
 import org.hoanguyen.register.dto.MemberDTO;
 import org.hoanguyen.register.entity.Account;
 import org.hoanguyen.register.entity.Member;
+<<<<<<< HEAD
+=======
+import org.hoanguyen.register.exception.UserExistException;
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
 import org.hoanguyen.register.repository.AccountRepository;
 import org.hoanguyen.register.repository.MemberRepository;
 import org.hoanguyen.register.service.AccountService;

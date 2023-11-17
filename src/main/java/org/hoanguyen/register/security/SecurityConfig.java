@@ -35,9 +35,15 @@ public class SecurityConfig {
 http.authorizeHttpRequests(
         auth -> auth.requestMatchers("/",
                 "/css/*","/js/*","/img/*",
+<<<<<<< HEAD
                 "/member-sign-up", "/process-user","/confirmation",
                 "/list-of-members","/find-member-by-email",
                 "/find-member-by-email/{email}",
+=======
+                "/user-sign-up", "/process-user","/confirmation",
+                "/list-of-members","/find-member-by-email",
+                "/find-student-by-email/{email}",
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
                 "/login").permitAll()
                 .requestMatchers("/account")
                 .hasAnyRole("MEMBER","SENIOR")

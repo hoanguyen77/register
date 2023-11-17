@@ -5,6 +5,10 @@ import org.hoanguyen.register.dto.UserDTO;
 import org.hoanguyen.register.entity.Role;
 import org.hoanguyen.register.entity.User;
 
+<<<<<<< HEAD
+=======
+import org.hoanguyen.register.exception.UserExistException;
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
 import org.hoanguyen.register.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

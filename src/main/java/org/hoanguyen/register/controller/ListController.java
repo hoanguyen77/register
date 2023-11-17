@@ -2,6 +2,7 @@ package org.hoanguyen.register.controller;
 
 import org.hoanguyen.register.dto.FindModel;
 import org.hoanguyen.register.dto.MemberDTO;
+<<<<<<< HEAD
 import org.hoanguyen.register.dto.SeniorDTO;
 import org.hoanguyen.register.dto.UserDTO;
 import org.hoanguyen.register.entity.Role;
@@ -14,17 +15,27 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
+=======
+import org.hoanguyen.register.service.MemberService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+<<<<<<< HEAD
 import java.util.stream.Collectors;
+=======
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
 
 @Controller
 public class ListController {
     private static final Logger logger = LoggerFactory.getLogger(ListController.class.getName());
     private MemberService memberService;
+<<<<<<< HEAD
     private UserService userService;
     private SeniorService seniorService;
 
@@ -54,6 +65,20 @@ public class ListController {
             model.addAttribute("senior", seniorDTO);
         }
         return "detail";
+=======
+
+    @Autowired
+    public ListController(MemberService memberService) {
+        this.memberService = memberService;
+
+    }
+    @GetMapping("/account")
+    public String tranForm(Model model){
+            model.addAttribute("member",
+                    memberService.getAllMembers());
+
+        return "account";
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
 }
 
     @GetMapping("/list-of-members")

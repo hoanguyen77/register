@@ -25,7 +25,11 @@ public class RoleServiceTest {
     public void init()
     {
         role = new Role();
+<<<<<<< HEAD
         role.setName("ROLE_SENIOR");
+=======
+        role.setName("ROLE_MEMBER");
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
     }
 
     @Test

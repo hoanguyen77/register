@@ -33,6 +33,10 @@ public class LoginController {
     @RequestMapping("/home")
     public String redirectToAccount()
     {
+<<<<<<< HEAD
         return "redirect:/detail";
+=======
+        return "redirect:/account";
+>>>>>>> 067d4aa9f30180f12c718988c5537b6ecf6ffe73
     }
 }
